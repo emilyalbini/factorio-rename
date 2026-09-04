@@ -1,0 +1,14 @@
+[package]
+name = "factorio-rename"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.104"
+flate2 = "1.1.10"
+memchr = "2.8.3"
+zip = { version = "8.6.0", features = ["deflate"], default-features = false }
+
+[profile.dev.package]
+memchr.opt-level = 3
+zlib-rs.opt-level = 3
